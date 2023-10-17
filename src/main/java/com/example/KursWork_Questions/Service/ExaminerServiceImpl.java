@@ -27,7 +27,7 @@ public class ExaminerServiceImpl implements ExaminerService {
         }
         Set<Question> spisokNaVivod = new HashSet<>();
         while (spisokNaVivod.size() < amount) {
-            spisokNaVivod.add(questionsService.getRamndomQuestion());
+            spisokNaVivod.add(questionsService.getRandomQuestion());
         }
 
         return spisokNaVivod;

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 @Service
+
 public class JavaQuestionsService implements QuestionsService {
 
     private Set<Question> questionSpisok = new HashSet<>();
@@ -38,12 +39,11 @@ public class JavaQuestionsService implements QuestionsService {
     }
 
     @Override
-    public Question getRamndomQuestion() {
+    public Question getRandomQuestion() {
         if (questionSpisok.size() == 0) {
             throw new NotEnoughtQuestions();
         }
-
-
-        return null;
+        int random = rnd.nextInt(questionSpisok.size());
+        return (Question) questionSpisok.toArray()[random];
     }
 }

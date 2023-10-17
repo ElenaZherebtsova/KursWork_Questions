@@ -3,7 +3,6 @@ package com.example.KursWork_Questions.Service;
 import com.example.KursWork_Questions.DTO.Question;
 
 import java.util.Collection;
-import java.util.Collections;
 
 public interface QuestionsService {
 
@@ -15,5 +14,5 @@ public interface QuestionsService {
 
     Collection getAll();
 
-    Question getRamndomQuestion();
+    Question getRandomQuestion();
 }
